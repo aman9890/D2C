@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shruti | Bespoke Diamond Fine Jewellery & Luxury Atelier</title>
+    
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="Discover Shruti Fine Jewellery. Handcrafted bespoke diamond rings, heritage craftsmanship, and personalized high-end jewelry in an immersive digital atelier.">
+    <meta name="keywords" content="luxury jewellery, bespoke diamonds, diamond ring designer, conflict-free diamonds, engagement rings, custom jewellery, premium diamonds">
+    <meta name="author" content="Shruti Atelier">
+    
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Shruti | Bespoke Diamond Fine Jewellery">
+    <meta property="og:description" content="Experience the digital showroom of Shruti. Design your own legacy ring in our Bespoke Atelier.">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Transparent Luxury Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand-logo" id="nav-logo">Shruti</a>
+            <div class="nav-links" id="nav-links-container">
+                <a href="#customizer" class="nav-link">Bespoke Atelier</a>
+                <a href="#collections" class="nav-link">Collections</a>
+                <a href="#masterclass" class="nav-link">The 4Cs Masterclass</a>
+                <a href="#booking" class="nav-link">Private Salon</a>
+            </div>
+            <a href="#customizer" class="btn-nav-action" id="nav-cta-btn">Begin Commission</a>
+        </div>
+    </nav>
+
+    <!-- Parallax Hero Campaign Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-bg" id="hero-background-image"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content scroll-reveal">
+            <h2 class="hero-subtitle">THE ART OF HIGH HOROLOGY & DIAMONDS</h2>
+            <h1 class="hero-title">Sourced in Purity.<br>Crafted in Brilliance.</h1>
+            <p class="hero-desc">Every Shruti diamond is a masterwork of light, hand-selected and crafted to commemorate your unique legacy. Experience e-commerce elevated to an art form.</p>
+            <div class="hero-cta-group">
+                <a href="#customizer" class="btn btn-primary" id="hero-primary-btn">Enter the Atelier</a>
+                <a href="#collections" class="btn btn-secondary" id="hero-secondary-btn">Explore Collections</a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator" id="scroll-indicator">
+            <span>Scroll to Discover</span>
+            <div class="indicator-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Bespoke Atelier (Interactive Ring Customizer) -->
+    <section class="customizer-section" id="customizer">
+        <div class="section-header scroll-reveal">
+            <span class="section-tag">BESPOKE EXPERIENCE</span>
+            <h2 class="section-title">The Bespoke Atelier</h2>
+            <p class="section-subtitle">Select your metal, choose your cut, and scale the diamond to visualize your masterwork in real-time.</p>
+        </div>
+
+        <div class="customizer-container">
+            <!-- Left Side: Interactive Visual Showroom -->
+            <div class="customizer-visual scroll-reveal">
+                <div class="pedestal-container">
+                    <div class="pedestal"></div>
+                    <div class="light-beam"></div>
+                    <div class="ring-display-wrapper" id="ring-display-wrapper">
+                        <!-- Dynamic overlay for diamonds and metals -->
+                        <img src="assets/leclat_diamond_ring.png" alt="Bespoke Diamond Ring" class="ring-base-img" id="ring-base-image">
+                        <div class="sparkle-layer" id="sparkle-container"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Customizer Controls -->
+            <div class="customizer-controls scroll-reveal" id="customizer-panel">
+                <h3 class="controls-title">Configure Your Piece</h3>
+                <div class="controls-divider"></div>
+
+                <!-- 1. Metal Select -->
+                <div class="control-group">
+                    <span class="control-label">Select Precious Metal: <strong id="metal-selected-label">Platinum</strong></span>
+                    <div class="metal-selectors">
+                        <button class="metal-btn active platinum" data-metal="platinum" id="btn-metal-platinum" aria-label="Select Platinum">
+                            <span class="metal-color" style="background: linear-gradient(135deg, #e5e5e5, #ffffff, #b5b5b5);"></span>
+                        </button>
+                        <button class="metal-btn yellow-gold" data-metal="yellow-gold" id="btn-metal-yellow" aria-label="Select 18k Yellow Gold">
+                            <span class="metal-color" style="background: linear-gradient(135deg, #e5c060, #f8e59b, #c59b27);"></span>
+                        </button>
+                        <button class="metal-btn rose-gold" data-metal="rose-gold" id="btn-metal-rose" aria-label="Select 18k Rose Gold">
+                            <span class="metal-color" style="background: linear-gradient(135deg, #e0a39a, #f7d2cb, #c27d73);"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2. Diamond Cut Select -->
+                <div class="control-group">
+                    <span class="control-label">Select Diamond Cut: <strong id="cut-selected-label">Round Brilliant</strong></span>
+                    <div class="cut-selectors">
+                        <button class="cut-btn active" data-cut="round" id="btn-cut-round">Round</button>
+                        <button class="cut-btn" data-cut="emerald" id="btn-cut-emerald">Emerald</button>
+                        <button class="cut-btn" data-cut="cushion" id="btn-cut-cushion">Cushion</button>
+                        <button class="cut-btn" data-cut="pear" id="btn-cut-pear">Pear</button>
+                    </div>
+                </div>
+
+                <!-- 3. Carat Weight Slider -->
+                <div class="control-group">
+                    <div class="slider-header">
+                        <span class="control-label">Select Carat Weight:</span>
+                        <span class="slider-value" id="carat-value-label">1.00 ct</span>
+                    </div>
+                    <input type="range" min="0.5" max="3.0" step="0.25" value="1.0" class="gold-range-slider" id="carat-slider">
+                    <div class="slider-scale">
+                        <span>0.5ct</span>
+                        <span>1.0ct</span>
+                        <span>1.5ct</span>
+                        <span>2.0ct</span>
+                        <span>2.5ct</span>
+                        <span>3.0ct</span>
+                    </div>
+                </div>
+
+                <!-- 4. Quality Badge Preview -->
+                <div class="specs-preview-box">
+                    <div class="spec-item">
+                        <span class="spec-name">Color Grade</span>
+                        <span class="spec-val">D (Colorless)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Clarity Grade</span>
+                        <span class="spec-val">FL (Flawless)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Certification</span>
+                        <span class="spec-val">GIA Certified</span>
+                    </div>
+                </div>
+
+                <!-- Pricing & Action -->
+                <div class="pricing-container">
+                    <div class="price-labels">
+                        <span class="price-title">Estimated Valuation</span>
+                        <div class="price-box">
+                            <span class="currency">$</span><span class="price-value" id="dynamic-price">8,500</span>
+                        </div>
+                    </div>
+                    <div class="pricing-cta">
+                        <a href="#booking" class="btn btn-primary btn-full" id="btn-customizer-inquire">Request Custom Commission</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curated Editorial Collections -->
+    <section class="collections-section" id="collections">
+        <div class="section-header scroll-reveal">
+            <span class="section-tag">CURATED EDITIONS</span>
+            <h2 class="section-title">The Signature Collections</h2>
+            <p class="section-subtitle">Exquisite designs curated for discerning collectors. Each selection represents the pinnacle of craftsmanship.</p>
+        </div>
+
+        <div class="collections-grid">
+            <!-- Card 1 -->
+            <div class="collection-card scroll-reveal" id="collection-card-1">
+                <div class="card-img-wrapper">
+                    <img src="assets/leclat_diamond_ring.png" alt="The Solitaire Nuance" class="card-img">
+                    <div class="card-img-overlay"></div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">The Solitaire Nuance</h3>
+                    <p class="card-desc">Bespoke engagement rings celebrating single, flawless stones set on architectural metal bands.</p>
+                    <span class="card-price">From $5,200</span>
+                    <a href="#customizer" class="card-link">Customize Design &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="collection-card scroll-reveal" id="collection-card-2">
+                <div class="card-img-wrapper">
+                    <!-- Elegant placeholder generated with CSS gradients since we have the signature ring and model -->
+                    <div class="placeholder-card-img" style="background: radial-gradient(circle, #2a2a2a 0%, #111111 100%);">
+                        <span class="placeholder-icon">✨</span>
+                    </div>
+                    <div class="card-img-overlay"></div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">The Celestial Pendant</h3>
+                    <p class="card-desc">Astral-inspired neckpieces utilizing layered baguette-cut diamonds to capture maximum light refraction.</p>
+                    <span class="card-price">From $7,800</span>
+                    <a href="#booking" class="card-link">Inquire Online &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="collection-card scroll-reveal" id="collection-card-3">
+                <div class="card-img-wrapper">
+                    <div class="placeholder-card-img" style="background: radial-gradient(circle, #222222 0%, #0d0d0d 100%);">
+                        <span class="placeholder-icon">💎</span>
+                    </div>
+                    <div class="card-img-overlay"></div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">The Auroral Drops</h3>
+                    <p class="card-desc">Chandelier earrings designed to react fluidly to movement, capturing individual rays of moonlight.</p>
+                    <span class="card-price">From $9,400</span>
+                    <a href="#booking" class="card-link">Inquire Online &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diamond Masterclass (The 4Cs Tutorial) -->
+    <section class="masterclass-section" id="masterclass">
+        <div class="section-header scroll-reveal">
+            <span class="section-tag">DIAMOND EDUCATION</span>
+            <h2 class="section-title">The 4Cs Masterclass</h2>
+            <p class="section-subtitle">Understanding the metrics that define diamond rare value. Slide to observe how slight changes shift quality.</p>
+        </div>
+
+        <div class="masterclass-container scroll-reveal">
+            <!-- Navigation Tabs -->
+            <div class="masterclass-tabs">
+                <button class="tab-btn active" data-tab="clarity" id="btn-tab-clarity">Clarity</button>
+                <button class="tab-btn" data-tab="color" id="btn-tab-color">Color</button>
+                <button class="tab-btn" data-tab="cut" id="btn-tab-cut">Cut</button>
+                <button class="tab-btn" data-tab="carat" id="btn-tab-carat">Carat</button>
+            </div>
+
+            <!-- Tab Content Display -->
+            <div class="masterclass-content-wrapper">
+                
+                <!-- 1. Clarity Tab -->
+                <div class="tab-pane active" id="pane-clarity">
+                    <div class="pane-split">
+                        <div class="pane-visual">
+                            <div class="microscope-view">
+                                <div class="lens-circle">
+                                    <!-- A virtual diamond facet render with SVG -->
+                                    <svg viewBox="0 0 100 100" class="diamond-vector">
+                                        <polygon points="50,15 80,35 50,85 20,35" fill="none" stroke="#DFBA73" stroke-width="0.8"/>
+                                        <polygon points="50,15 65,35 50,85 35,35" fill="none" stroke="#C5A059" stroke-width="0.5"/>
+                                        <line x1="50" y1="15" x2="50" y2="85" stroke="#C5A059" stroke-width="0.5"/>
+                                        <line x1="20" y1="35" x2="80" y2="35" stroke="#C5A059" stroke-width="0.5"/>
+                                    </svg>
+                                    <!-- Dynamic inclusion specs dots -->
+                                    <div class="inclusion-dots-container" id="inclusions-container">
+                                        <span class="inclusion-dot pos-1"></span>
+                                        <span class="inclusion-dot pos-2"></span>
+                                        <span class="inclusion-dot pos-3"></span>
+                                        <span class="inclusion-dot pos-4"></span>
+                                    </div>
+                                    <div class="lens-glow"></div>
+                                </div>
+                                <span class="lens-label">10x Microscope Simulation</span>
+                            </div>
+                        </div>
+                        <div class="pane-text">
+                            <h3 class="pane-headline">Diamond Clarity Grades</h3>
+                            <p class="pane-description">Clarity measures the microscopic birthmarks—inclusions (internal) and blemishes (external)—within a stone. Lower clarity scores represent denser microscopic carbon marks.</p>
+                            
+                            <div class="interactive-slider-box">
+                                <div class="slider-header">
+                                    <span>Clarity Level: <strong id="clarity-grade-title" style="color: #DFBA73;">FL (Flawless)</strong></span>
+                                </div>
+                                <input type="range" min="1" max="4" value="4" class="gold-range-slider" id="clarity-interactive-slider">
+                                <div class="slider-scale">
+                                    <span>SI1</span>
+                                    <span>VS2</span>
+                                    <span>VVS1</span>
+                                    <span>FL</span>
+                                </div>
+                                <p class="interactive-info-note" id="clarity-desc-note">Flawless diamonds show absolutely zero inclusions under 10x magnification. Extremely rare.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Color Tab -->
+                <div class="tab-pane" id="pane-color">
+                    <div class="pane-split">
+                        <div class="pane-visual">
+                            <div class="diamond-color-tester" id="color-tester-bg">
+                                <svg viewBox="0 0 100 100" class="diamond-vector-color" id="diamond-vector-color">
+                                    <polygon points="50,15 80,35 50,85 20,35" fill="rgba(255,255,255,0.05)" stroke="#DFBA73" stroke-width="0.8"/>
+                                    <polygon points="50,15 65,35 50,85 35,35" fill="none" stroke="#C5A059" stroke-width="0.5"/>
+                                    <line x1="50" y1="15" x2="50" y2="85" stroke="#C5A059" stroke-width="0.5"/>
+                                    <line x1="20" y1="35" x2="80" y2="35" stroke="#C5A059" stroke-width="0.5"/>
+                                </svg>
+                                <div class="color-test-glow" id="color-overlay-glow"></div>
+                            </div>
+                        </div>
+                        <div class="pane-text">
+                            <h3 class="pane-headline">Diamond Coloration Grades</h3>
+                            <p class="pane-description">Truly luxury diamonds are chemically pure and structurally perfect, showing absolutely zero tint. The scale runs from D (completely colorless) to Z (light yellow/brown tint).</p>
+                            
+                            <div class="interactive-slider-box">
+                                <div class="slider-header">
+                                    <span>Color Spectrum: <strong id="color-grade-title" style="color: #DFBA73;">D (Colorless)</strong></span>
+                                </div>
+                                <input type="range" min="1" max="4" value="1" class="gold-range-slider" id="color-interactive-slider">
+                                <div class="slider-scale">
+                                    <span>D</span>
+                                    <span>F</span>
+                                    <span>H</span>
+                                    <span>J</span>
+                                </div>
+                                <p class="interactive-info-note" id="color-desc-note">D is the highest possible grade. A stone of absolute purity, refracting perfectly clear white light.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Cut Tab -->
+                <div class="tab-pane" id="pane-cut">
+                    <div class="pane-split">
+                        <div class="pane-visual">
+                            <div class="cut-refraction-sim">
+                                <div class="refraction-box">
+                                    <svg viewBox="0 0 120 100" class="cut-cross-section">
+                                        <!-- Crown and Pavilion cross section -->
+                                        <polygon points="20,30 100,30 85,15 35,15" fill="none" stroke="#cccccc" stroke-width="0.8"/>
+                                        <polygon points="20,30 100,30 60,85" fill="none" stroke="#DFBA73" stroke-width="0.8"/>
+                                        <!-- Dynamic rays -->
+                                        <g id="refraction-rays">
+                                            <!-- Light entering -->
+                                            <line x1="60" y1="5" x2="60" y2="15" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="2,2"/>
+                                            <!-- Light internal path -->
+                                            <polyline points="60,15 60,85 90,38 30,38 60,85" fill="none" stroke="#DFBA73" stroke-width="1" id="cut-internal-ray"/>
+                                            <!-- Perfect light leaving -->
+                                            <line x1="30" y1="38" x2="15" y2="15" stroke="#ffffff" stroke-width="1.2" id="cut-out-ray-1"/>
+                                            <line x1="90" y1="38" x2="105" y2="15" stroke="#ffffff" stroke-width="1.2" id="cut-out-ray-2"/>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <span class="lens-label" id="cut-refraction-title">Ideal Symmetry Refraction</span>
+                            </div>
+                        </div>
+                        <div class="pane-text">
+                            <h3 class="pane-headline">The Precision Cut</h3>
+                            <p class="pane-description">Cut is widely considered the most vital of the 4Cs. It refers not to diamond shape, but how expertly its facets interact with light. An ideal cut returns maximum brilliance back through the top.</p>
+                            
+                            <div class="interactive-slider-box">
+                                <div class="slider-header">
+                                    <span>Cut Quality: <strong id="cut-grade-title" style="color: #DFBA73;">Ideal (Maximum Fire)</strong></span>
+                                </div>
+                                <input type="range" min="1" max="3" value="3" class="gold-range-slider" id="cut-interactive-slider">
+                                <div class="slider-scale">
+                                    <span>Fair</span>
+                                    <span>Very Good</span>
+                                    <span>Ideal</span>
+                                </div>
+                                <p class="interactive-info-note" id="cut-desc-note">Light bounces internally and exits fully through the crown, creating the celebrated 'Fire & Brilliance'.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Carat Tab -->
+                <div class="tab-pane" id="pane-carat">
+                    <div class="pane-split">
+                        <div class="pane-visual">
+                            <div class="carat-comparison-box">
+                                <div class="carat-circle-grid">
+                                    <div class="carat-circle-item">
+                                        <div class="ring-circle" style="width: 25px; height: 25px;"></div>
+                                        <span>0.50 ct</span>
+                                    </div>
+                                    <div class="carat-circle-item">
+                                        <div class="ring-circle" style="width: 40px; height: 40px;"></div>
+                                        <span>1.00 ct</span>
+                                    </div>
+                                    <div class="carat-circle-item active">
+                                        <div class="ring-circle" id="carat-interactive-circle" style="width: 60px; height: 60px;"></div>
+                                        <span id="carat-interactive-label">2.00 ct</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pane-text">
+                            <h3 class="pane-headline">Understanding Carat Weight</h3>
+                            <p class="pane-description">Carat is the measurement of a diamond's physical weight. One metric carat equals precisely 200 milligrams. Even a fractional increase in carat size escalates rarity exponentially.</p>
+                            
+                            <div class="interactive-slider-box">
+                                <div class="slider-header">
+                                    <span>Interactive Carat weight: <strong id="carat-education-title" style="color: #DFBA73;">2.00 Carats</strong></span>
+                                </div>
+                                <input type="range" min="0.5" max="3.0" step="0.25" value="2.0" class="gold-range-slider" id="carat-interactive-slider">
+                                <div class="slider-scale">
+                                    <span>0.5ct</span>
+                                    <span>1.0ct</span>
+                                    <span>1.5ct</span>
+                                    <span>2.0ct</span>
+                                    <span>2.5ct</span>
+                                    <span>3.0ct</span>
+                                </div>
+                                <p class="interactive-info-note" id="carat-edu-note">A 2-carat stone is exponentially rarer than two 1-carat stones combined, making its valuation significantly higher.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Private Salon Booking (Virtual / In-Person Concierge) -->
+    <section class="booking-section" id="booking">
+        <div class="booking-overlay"></div>
+        <div class="booking-container scroll-reveal">
+            <div class="booking-brand-info">
+                <span class="booking-tag">PRIVATE CONSULTATIONS</span>
+                <h2 class="booking-headline">Arrange a Salon Meeting</h2>
+                <p class="booking-body">Whether you are commissions-focused, seeking GIA-accredited diamond guidance, or designing a bespoke engagement ring, our high-end private concierges await your appointment.</p>
+                <div class="ethical-points">
+                    <div class="ethical-item">
+                        <span class="ethical-icon">🛡️</span>
+                        <div>
+                            <strong>Conflict-Free Diamonds</strong>
+                            <p>Compliant with the Kimberley Process.</p>
+                        </div>
+                    </div>
+                    <div class="ethical-item">
+                        <span class="ethical-icon">🏺</span>
+                        <div>
+                            <strong>Recycled Metals</strong>
+                            <p>Crafted strictly with Geller-refined 18k and Platinum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Form -->
+            <div class="booking-form-wrapper">
+                <form id="salon-booking-form" class="booking-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="booking-name">Full Name</label>
+                            <input type="text" id="booking-name" required placeholder="E.g., Charlotte Sterling">
+                        </div>
+                        <div class="form-group">
+                            <label for="booking-email">Email Address</label>
+                            <input type="email" id="booking-email" required placeholder="E.g., charlotte@example.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="booking-service">Preferred Consultation</label>
+                        <select id="booking-service" required>
+                            <option value="" disabled selected>Select Consultation Type</option>
+                            <option value="virtual">Virtual Video Concierge (Zoom HD)</option>
+                            <option value="showroom">Private Showroom Appointment</option>
+                            <option value="bespoke">Bespoke Customizer Collaboration</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="booking-date">Preferred Date</label>
+                            <input type="date" id="booking-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="booking-notes">Aesthetic Goals (Optional)</label>
+                            <input type="text" id="booking-notes" placeholder="E.g., Custom 2ct Cushion cut band">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full" id="btn-submit-booking">Schedule Private Salon</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Footer -->
+    <footer class="luxury-footer">
+        <div class="footer-container">
+            <div class="footer-brand-col">
+                <h2 class="footer-logo">Shruti</h2>
+                <p class="footer-tagline">Establishing legacies of light since 1998.</p>
+                <div class="certified-logos">
+                    <span class="cert-badge">GIA Certified</span>
+                    <span class="cert-badge">RJC Member</span>
+                    <span class="cert-badge">Kimberley Process Compliant</span>
+                </div>
+            </div>
+            
+            <div class="footer-nav-col">
+                <h4>ATELIER</h4>
+                <a href="#customizer">Bespoke Customizer</a>
+                <a href="#collections">Signature Collections</a>
+                <a href="#masterclass">Diamond Masterclass</a>
+                <a href="#booking">Book Appointment</a>
+            </div>
+
+            <div class="footer-nav-col">
+                <h4>LEGAL & INFO</h4>
+                <a href="#">Ethical Sourcing</a>
+                <a href="#">Conflict-Free Guarantee</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            
+            <div class="footer-contact-col">
+                <h4>CONTACT</h4>
+                <p>Private Office: Place Vendôme, Paris</p>
+                <p>Email: concierge@leclat-atelier.com</p>
+                <p>Phone: +33 (0) 1 42 68 53 00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Shruti Fine Jewellery. All Rights Reserved. Redesigned with Bespoke Excellence.</p>
+        </div>
+    </footer>
+
+    <!-- Luxury Animated Confirmation Modal -->
+    <div class="modal-overlay" id="confirmation-modal">
+        <div class="modal-content glassmorphism">
+            <div class="modal-close" id="btn-modal-close">&times;</div>
+            <div class="modal-icon-glow">✦</div>
+            <h3 class="modal-title">Salon Request Received</h3>
+            <p class="modal-desc" id="confirmation-modal-desc">Thank you. A GIA-accredited luxury concierge will review your consultation request and contact you within 24 business hours to finalize your appointment details.</p>
+            <div class="modal-divider"></div>
+            <p class="modal-signature">Shruti Atelier Team</p>
+            <button class="btn btn-primary" id="btn-modal-ok">Return to Atelier</button>
+        </div>
+    </div>
+
+    <!-- JavaScript Interactions Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
